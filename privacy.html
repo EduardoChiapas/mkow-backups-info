@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de privacidad de MKOW Backups: uso de OAuth y de Google Drive para respaldos personales de Minecraft.">
+  <meta name="theme-color" content="#0c1221">
+  <title>Política de privacidad — MKOW Backups</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0c1221;--card:#131e32;--text:#eef4ff;--muted:#afbed3;--accent:#80ebbf;--line:#2b3a51}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 100% 0,#173942,transparent 38%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.73}
+    a{color:var(--accent);text-underline-offset:3px}a:hover{color:#b2ffe0}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:3px}.wrap{max-width:1050px;margin:auto;padding:0 24px}header{border-bottom:1px solid var(--line);background:#0c1221e0}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;color:var(--text)}.mark{width:36px;height:36px;display:grid;place-items:center;background:#193a3d;border:1px solid #3a8c78;border-radius:12px;color:var(--accent);font-size:19px}nav{display:flex;gap:24px}nav a{font-size:.94rem;color:#c4d5e9;text-decoration:none}nav a[aria-current=page]{color:var(--accent)}
+    .layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:46px;padding-top:62px;padding-bottom:80px}.toc{align-self:start;position:sticky;top:28px;border:1px solid var(--line);border-radius:16px;background:#131e32;padding:20px}.toc strong{font-size:.87rem;color:#d5e7f3}.toc a{display:block;font-size:.87rem;margin-top:13px;text-decoration:none;color:var(--muted)}.toc a:hover{color:var(--accent)}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.13em;font-weight:750;font-size:.78rem}.content{max-width:710px}.content h1{font-size:clamp(2.1rem,4vw,3.35rem);line-height:1.15;letter-spacing:-.04em;margin:14px 0 20px}.lead{color:var(--muted);font-size:1.1rem;margin-bottom:35px}.content h2{font-size:1.31rem;letter-spacing:-.02em;margin:36px 0 12px;scroll-margin-top:20px}.content p,.content li{color:#cad5e4}.content ul{padding-left:23px}.content li+li{margin-top:9px}.note{border:1px solid #345a5c;background:#12252e;border-radius:14px;padding:17px 19px;color:#d6e6e5;margin:26px 0}.note strong{color:var(--accent)}.muted{color:var(--muted)}.placeholder{display:inline-block;padding:1px 7px;border:1px dashed #bdb05a;border-radius:5px;background:#322e1c;color:#ffe59d;font-weight:650;word-break:break-word}
+    footer{border-top:1px solid var(--line);padding:24px 0 32px;color:var(--muted);font-size:.9rem}.footerrow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:790px){.layout{grid-template-columns:1fr;gap:22px;padding-top:45px}.toc{position:static}.toc a{display:inline-block;margin-right:20px}.content h2{margin-top:30px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="brand" href="./index.html"><span class="mark" aria-hidden="true">◆</span>MKOW Backups</a><nav aria-label="Navegación principal"><a href="./index.html">Inicio</a><a href="./privacy.html" aria-current="page">Privacidad</a></nav></div></header>
+  <main class="wrap layout">
+    <aside class="toc" aria-label="Índice"><strong>En esta página</strong><a href="#responsable">Responsable</a><a href="#datos">Datos y permisos</a><a href="#uso">Uso y almacenamiento</a><a href="#compartir">Compartición</a><a href="#seguridad">Seguridad</a><a href="#retencion">Conservación y eliminación</a><a href="#revocar">Revocar acceso</a><a href="#contacto">Contacto</a></aside>
+    <article class="content">
+      <div class="eyebrow">MKOW Backups</div><h1>Política de privacidad</h1>
+      <p class="lead">Esta página describe cómo MKOW Backups utiliza la autorización de Google y los archivos de Google Drive para hacer copias de seguridad de un servidor personal de Minecraft.</p>
+      <div class="note"><strong>Uso personal.</strong> MKOW Backups no es una plataforma de registro público. El propietario del servidor configura y autoriza personalmente su acceso a Google Drive.</div>
+      <h2 id="responsable">1. Responsable y finalidad</h2>
+      <p>MKOW Backups es una herramienta independiente de uso personal. Su única finalidad es crear, transferir, conservar y, cuando sea necesario, recuperar copias de seguridad de un servidor de Minecraft. No está afiliada a Google, Oracle ni Mojang.</p>
+      <h2 id="datos">2. Qué información y permisos utiliza</h2>
+      <p>Para funcionar, MKOW Backups utiliza el acceso a Google Drive que el propietario conceda mediante OAuth. Dependiendo del alcance autorizado durante la configuración de rclone, ese permiso podría permitir ver, crear, modificar o eliminar archivos. El objetivo es operar sobre los archivos y carpetas de respaldo de MKOW Backups, no examinar contenido personal ajeno a los respaldos.</p>
+      <p>Los archivos respaldados pueden contener mundos, inventarios, identificadores de jugadores, configuraciones y datos de complementos del servidor de Minecraft. Los tokens OAuth se usan para autenticar las transferencias; no deben compartirse ni publicarse.</p>
+      <h2 id="uso">3. Cómo se utilizan y almacenan los datos</h2>
+      <ul>
+        <li>El servidor Minecraft genera archivos comprimidos de respaldo en su almacenamiento de Oracle Cloud.</li>
+        <li>rclone utiliza la autorización OAuth del propietario para subir esos archivos a su cuenta de Google Drive.</li>
+        <li>Los respaldos permanecen en Drive hasta que el propietario o una política de limpieza configurada los elimina.</li>
+        <li>La configuración de rclone y sus tokens de autorización se almacenan en la máquina que ejecuta el proceso y deben protegerse mediante permisos del sistema.</li>
+      </ul>
+      <h2 id="compartir">4. Compartición de información</h2>
+      <p>MKOW Backups no vende datos, no utiliza la información obtenida de Google Drive para publicidad y no transfiere información a intermediarios publicitarios. Google presta el servicio de almacenamiento y Oracle Cloud aloja la máquina utilizada para crear y transferir las copias; sus respectivas condiciones y políticas pueden aplicar.</p>
+      <h2 id="seguridad">5. Seguridad</h2>
+      <p>La conexión con Google Drive se realiza mediante las interfaces de autorización y transferencia de Google utilizadas por rclone. El propietario debe proteger las credenciales OAuth, las claves de acceso a Oracle y los respaldos guardados. Ningún método de almacenamiento garantiza riesgo cero; se recomienda conservar una segunda copia fuera de Oracle.</p>
+      <h2 id="retencion">6. Conservación y eliminación</h2>
+      <p>La retención de respaldos se determina por la configuración del servidor y de sus tareas automáticas. El propietario puede eliminar archivos directamente desde Google Drive o detener las tareas de sincronización. La eliminación de archivos de Drive no elimina por sí sola las copias locales existentes en Oracle o en otros dispositivos.</p>
+      <h2 id="revocar">7. Cómo revocar el acceso</h2>
+      <p>El propietario puede revocar la autorización de MKOW Backups desde la <a href="https://myaccount.google.com/connections" rel="noopener noreferrer">administración de conexiones de su cuenta de Google</a>. También debe desactivar las tareas de subida y eliminar los tokens almacenados en Oracle si desea detener por completo el acceso. Revocar la autorización no borra automáticamente los archivos ya guardados en Google Drive.</p>
+      <h2 id="contacto">8. Contacto y cambios</h2>
+      <!-- IMPORTANTE: sustituir el texto a continuación por un contacto público real antes de publicar la página y registrar la aplicación en Google. -->
+      <p>Contacto para cuestiones sobre privacidad y funcionamiento: <span class="placeholder">[AÑADE_AQUÍ_TU_CORREO_PÚBLICO]</span>.</p>
+      <p>Esta política puede actualizarse si cambia el funcionamiento de MKOW Backups o los permisos de Google Drive solicitados. Cualquier cambio relevante se reflejará en esta página.</p>
+      <p class="muted">Última actualización: 17 de octubre de 2026.</p>
+    </article>
+  </main>
+  <footer><div class="wrap footerrow"><span>© 2026 MKOW Backups · Proyecto personal independiente</span><span><a href="./index.html">Inicio</a> · <a href="./privacy.html">Privacidad</a></span></div></footer>
+</body>
+</html>
